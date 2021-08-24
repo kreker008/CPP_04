@@ -1,11 +1,11 @@
-PROGRAM_NAME		=	ex00
+PROGRAM_NAME		=	ex01
 
 HDR_PATH			=	.
 SRC_PATH			=	.
 
-SRC					=	Animal.cpp Dog.cpp Cat.cpp main.cpp WrongAnimal.cpp WrongCat.cpp
+SRC					=	Animal.cpp Dog.cpp Cat.cpp Brain.cpp main.cpp WrongAnimal.cpp WrongCat.cpp
 
-HDR					=	Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
+HDR					=	Animal.hpp Dog.hpp Cat.hpp Brain.hpp WrongAnimal.hpp WrongCat.hpp
 
 OBJ					=	${SRC:%.cpp=%.o}
 

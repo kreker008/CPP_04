@@ -19,7 +19,12 @@ public:
 	virtual void				makeSound() const;
 	virtual std::string const&	getType() const;
 
-	~Animal();
+	/*
+	 * Operator overlord
+	 */
+	Animal& operator=(Animal const&);
+
+	virtual ~Animal();
 private:
 	std::string type;
 };

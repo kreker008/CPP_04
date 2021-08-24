@@ -5,13 +5,19 @@
 #include "Brain.hpp"
 #include "iostream"
 
-class Dog : public Animal
+class Dog : virtual public Animal
 {
 public:
 	/*
 	 *  Constructor
 	 */
 	Dog();
+	Dog(Dog const&);
+
+	/*
+	 * Operator overlord
+	 */
+	Dog&	operator=(Dog const&);
 
 	/*
 	 *  Func-member

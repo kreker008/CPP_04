@@ -9,7 +9,20 @@ Animal::Animal()
 }
 
 Animal::Animal(std::string const& type) : type(type)
-{}
+{
+
+}
+
+/*
+ * Operator overlord
+ */
+Animal& Animal::operator=(Animal const& obj)
+{
+	if (this == &obj)
+		return (*this);
+	this->type = obj.type;
+	return (*this);
+}
 
 /*
  *  Func-member
