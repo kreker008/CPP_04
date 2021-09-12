@@ -3,10 +3,11 @@
 /*
  *  Constructor
  */
-Character::Character(std::string const&)
+Character::Character(std::string const& name)
 {
 	for(int i = 0; i < 4; ++i)
 		materia_slot[i] = nullptr;
+	this->name = name;
 }
 
 Character::Character(Character const& obj)

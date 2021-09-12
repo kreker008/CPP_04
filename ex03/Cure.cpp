@@ -25,4 +25,4 @@ void Cure::use(ICharacter& target)
 /*
  *  Operator overlord
  */
-Cure& Cure::operator=(const Cure&) {} // privat unused func
+Cure& Cure::operator=(const Cure&) {return (*this);} // privat unused func

@@ -25,4 +25,4 @@ void Ice::use(ICharacter& target)
 /*
  *  Operator overlord
  */
-Ice& Ice::operator=(const Ice&) {} // privat unused func
+Ice& Ice::operator=(const Ice&) {return (*this);} // privat unused func

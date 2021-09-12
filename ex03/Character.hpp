@@ -6,7 +6,7 @@
 #include "string"
 #include "cstddef"
 
-class Character : ICharacter
+class Character : public ICharacter
 {
 public:
 	/*

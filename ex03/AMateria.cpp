@@ -9,7 +9,7 @@ const std::string& AMateria::getType() const
 
 void AMateria::use(ICharacter& target)
 {
-
+	std::cout << "*AMATERIA USE* do something with target" << target.getName() << std::endl;
 }
 
 AMateria::~AMateria(){}

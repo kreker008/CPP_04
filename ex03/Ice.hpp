@@ -3,7 +3,7 @@
 
 #include "AMateria.hpp"
 
-class Ice : AMateria
+class Ice : public AMateria
 {
 public:
 	/*
@@ -16,8 +16,6 @@ private:
 	 */
 	virtual void		use(ICharacter& target);
 	virtual AMateria*	clone() const;
-
-	~Ice();
 
 	/*
 	 *  Operator overlord

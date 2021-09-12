@@ -3,14 +3,23 @@
 
 #include "IMateriaSource.hpp"
 
-class MateriaSource : IMateriaSource
+class MateriaSource : public IMateriaSource
 {
 public:
 	/*
+	 *  Constructor
+	 */
+	MateriaSource();
+
+	/*
 	 *  Func-member
 	 */
-	virtual void learnMateria(AMateria*) = 0;
-	virtual AMateria* createMateria(std::string const & type) = 0;
+	virtual void learnMateria(AMateria*);
+	virtual AMateria* createMateria(std::string const & type);
+
+	~MateriaSource();
+private:
+	AMateria	*materia_source[4];
 };
 
 #endif
