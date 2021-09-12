@@ -21,7 +21,7 @@ public:
 	/*
 	*  Func-member
 	*/
-	virtual void				makeSound() const;
+	virtual void				makeSound() const = 0;
 	std::string const&			getType() const;
 	void 						set_type(std::string const&);
 
