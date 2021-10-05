@@ -10,6 +10,9 @@ public:
 	 *  Constructor
 	 */
 	Cure();
+	Cure(const Cure&);
+
+	virtual ~Cure();
 private:
 	/*
 	*  Operator overlord

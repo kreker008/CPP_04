@@ -12,21 +12,21 @@ public:
 	 *  Constructor
 	 */
 	Dog();
-	explicit Dog(Dog const&);
+	Dog(const Dog&);
 
 	/*
-	 * Operator overlord
+	 *  Operator overlord
 	 */
-	Dog&	operator=(Dog const&);
+	Dog& operator=(const Dog&);
 
 	/*
 	 *  Func-member
 	 */
-	void			makeSound() const;
+	virtual void makeSound() const;
 	Brain const&	get_brain() const;
 	void			set_brain_ideas(std::string);
 
-	~Dog();
+	virtual ~Dog();
 private:
 	Brain*		brain;
 };

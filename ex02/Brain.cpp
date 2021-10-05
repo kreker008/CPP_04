@@ -8,6 +8,13 @@ Brain::Brain() : ideas_num(0)
 	std::cout << "Brain constructor was worked" << std::endl;
 }
 
+Brain::Brain(const Brain& b) : ideas_num(b.ideas_num)
+{
+	std::cout << "Brain copy constructor was worked" << std::endl;
+	for(int i = 0; i < (int)b.ideas_num; ++i)
+		this->ideas[i] = b.ideas_num;
+}
+
 /*
  *  Operator overlord
  */
@@ -16,8 +23,15 @@ Brain& Brain::operator=(Brain const& obj)
 	std::cout << "Brain operator = was worked" << std::endl;
 	if (this == &obj)
 		return (*this);
-	for(int i = 0; i < (int)obj.ideas_num; ++i)
-		add_ideas(obj.ideas[i]);
+	this->ideas_num = obj.ideas_num;
+	{
+		int i = 0;
+
+		for(; i < (int)obj.ideas_num; ++i)
+			this->ideas[i] = obj.ideas[i];
+		for(; i < 100; ++i)
+			ideas[i].clear();
+	}
 	return (*this);
 }
 

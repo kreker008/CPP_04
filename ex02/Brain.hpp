@@ -11,6 +11,7 @@ public:
 	 *  Constructor
 	 */
 	Brain();
+	Brain(const Brain&);
 
 	/*
 	 *  Operator overlord
@@ -20,9 +21,8 @@ public:
 	/*
 	 *  Func-member
 	 */
-	void	add_ideas(std::string);
 	void	show_all_ideas() const;
-
+	void	add_ideas(std::string idea);
 	~Brain();
 private:
 	unsigned int	ideas_num;

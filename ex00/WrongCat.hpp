@@ -4,13 +4,19 @@
 #include "WrongAnimal.hpp"
 #include "iostream"
 
-class WrongCat : WrongAnimal
+class WrongCat : public WrongAnimal
 {
 public:
 	/*
 	 *  Constructor
 	 */
 	WrongCat();
+	WrongCat(const WrongCat&);
+
+	/*
+	 *  Operator overlord
+	 */
+	WrongCat& operator=(const WrongCat&);
 
 	/*
 	 *  Func-member

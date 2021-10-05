@@ -13,22 +13,21 @@ public:
 	 *  Constructor
 	 */
 	Cat();
-	explicit Cat(Cat const&);
+	Cat(const Cat&);
 
 	/*
-	 * Operator overlord
+	 *  Operator overlord
 	 */
-	Cat&	operator=(Cat const&);
-//	Cat&	operator=(Animal const& obj);
+	Cat& operator=(const Cat&);
 
 	/*
 	 *  Func-member
 	 */
-	void			makeSound() const;
+	virtual void	makeSound() const;
 	Brain const&	get_brain() const;
 	void			set_brain_ideas(std::string);
 
-	~Cat();
+	virtual ~Cat();
 private:
 	Brain*		brain;
 };

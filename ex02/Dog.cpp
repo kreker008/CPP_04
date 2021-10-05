@@ -8,22 +8,21 @@ Dog::Dog() : Animal("Dog"), brain(new Brain)
 	std::cout << "Dog constructor was worked" << std::endl;
 }
 
-Dog::Dog(Dog const& obj) : Animal(obj.getType())
+Dog::Dog(Dog const& obj) : Animal(obj.getType()), brain(new Brain)
 {
 	std::cout << "Dog copy constructor was worked" << std::endl;
-	this->brain = obj.brain;
+	*(this->brain) = *(obj.brain);
 }
 
 /*
- * Operator overlord
+ *  Operator overlord
  */
-Dog&	Dog::operator=(Dog const& obj)
+Dog& Dog::operator=(const Dog& d)
 {
-	std::cout << "Dog operator = was worked" << std::endl;
-	if (this == &obj)
+	if (this == &d)
 		return (*this);
-	this->set_type(obj.getType());
-	*(this->brain) = *(obj.brain);
+	static_cast<Animal&>(*this) = static_cast<const Animal&>(d);
+	*(this->brain) = *(d.brain);
 	return (*this);
 }
 

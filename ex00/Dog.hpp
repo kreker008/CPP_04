@@ -11,13 +11,19 @@ public:
 	 *  Constructor
 	 */
 	Dog();
+	Dog(const Dog&);
+
+	/*
+	 *  Operator overlord
+	 */
+	Dog& operator=(const Dog&);
 
 	/*
 	 *  Func-member
 	 */
-	void makeSound() const;
+	virtual void makeSound() const;
 
-	~Dog();
+	virtual ~Dog();
 private:
 };
 

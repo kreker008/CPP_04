@@ -8,24 +8,24 @@ Cat::Cat() : Animal("Cat"), brain(new Brain)
 	std::cout << "Cat constructor was worked" << std::endl;
 }
 
-Cat::Cat(Cat const& obj) : Animal(obj.getType())
+Cat::Cat(Cat const& obj) : Animal(obj.getType()), brain(new Brain)
 {
 	std::cout << "Cat copy constructor was worked" << std::endl;
-	this->brain = obj.brain;
+	*(this->brain) = *(obj.brain);
 }
 
 /*
- * Operator overlord
+ *  Operator overlord
  */
-Cat&	Cat::operator=(Cat const& obj)
+Cat& Cat::operator=(const Cat& c)
 {
-	std::cout << "Cat operator = was worked" << std::endl;
-	if (this == &obj)
+	if (this == &c)
 		return (*this);
-	this->set_type(obj.getType());
-	*(this->brain) = *(obj.brain);
+	static_cast<Animal&>(*this) = static_cast<const Animal&>(c);
+	*(this->brain) = *(c.brain);
 	return (*this);
 }
+
 
 /*
  *  Func-member

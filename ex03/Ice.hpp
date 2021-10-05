@@ -10,6 +10,9 @@ public:
 	 *  Constructor
 	 */
 	Ice();
+	Ice(const Ice&);
+
+	virtual ~Ice();
 private:
 	/*
 	 *  Func-member

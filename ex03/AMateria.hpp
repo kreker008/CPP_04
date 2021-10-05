@@ -10,12 +10,19 @@ class ICharacter;
 class AMateria
 {
 protected:
-	std::string type;
+	const std::string type;
+
 public:
 	/*
 	 *  Constructor
 	 */
 	AMateria(std::string const & type);
+	AMateria(const AMateria&);
+
+	/*
+	 *  Operator overlord
+	 */
+	AMateria& operator=(const AMateria&);
 
 	/*
 	 *  Func-member

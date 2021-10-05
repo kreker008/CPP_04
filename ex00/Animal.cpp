@@ -9,7 +9,25 @@ Animal::Animal()
 }
 
 Animal::Animal(std::string const& type) : type(type)
-{}
+{
+	std::cout << "Animal constructor with string argument was worked" << std::endl;
+}
+
+Animal::Animal(const Animal& a) : type(a.type)
+{
+	std::cout << "Animal copy constructor was worked" << std::endl;
+}
+
+/*
+ *  Operator overlord
+ */
+Animal& Animal::operator=(const Animal& a)
+{
+	if (this == &a)
+		return (*this);
+	this->type = a.type;
+	return (*this);
+}
 
 /*
  *  Func-member

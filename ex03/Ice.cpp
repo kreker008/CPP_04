@@ -5,8 +5,18 @@
  */
 Ice::Ice() : AMateria("ice")
 {
-
+	std::cout << "Ice constructor was worked" << std::endl;
 }
+
+Ice::Ice(const Ice& i) : AMateria(i.getType())
+{
+	std::cout << "Ice constructor was worked" << std::endl;
+}
+
+/*
+ *  Operator overlord
+ */
+Ice& Ice::operator=(const Ice&) {return (*this);} // privat unused func
 
 /*
  *  Func-member
@@ -22,7 +32,8 @@ void Ice::use(ICharacter& target)
 	<< target.getName() << std::endl;
 }
 
-/*
- *  Operator overlord
- */
-Ice& Ice::operator=(const Ice&) {return (*this);} // privat unused func
+Ice::~Ice()
+{
+	std::cout << "Ice destructor was worked" << std::endl;
+}
+

@@ -13,15 +13,20 @@ Animal::Animal(std::string const& type) : type(type)
 	std::cout << "Animal(string) constructor was worked" << std::endl;
 }
 
+Animal::Animal(const Animal& a) : type(a.type)
+{
+	std::cout << "Animal copy constructor was worked" << std::endl;
+}
+
 /*
- * Operator overlord
+ *  Operator overlord
  */
-Animal& Animal::operator=(Animal const& obj)
+Animal& Animal::operator=(const Animal& a)
 {
 	std::cout << "Animal operator = was worked" << std::endl;
-	if (this == &obj)
+	if (this == &a)
 		return (*this);
-	this->type = obj.type;
+	this->type = a.type;
 	return (*this);
 }
 
@@ -36,11 +41,6 @@ void Animal::makeSound() const
 std::string const&	Animal::getType() const
 {
 	return (this->type);
-}
-
-void	Animal::set_type(std::string const &type)
-{
-	this->type = type;
 }
 
 Animal::~Animal()

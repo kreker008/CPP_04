@@ -28,26 +28,26 @@ int main()
 	ct1.set_brain_ideas("IM cat?");
 
 	cout << endl;
-	cout << "Cat1 brain adress" << &ct1.get_brain() << endl;
-	cout << "Cat2 brain adress" << &ct2.get_brain() << endl;
+	cout << "Cat1 brain address" << &ct1.get_brain() << endl;
+	cout << "Cat2 brain address" << &ct2.get_brain() << endl;
 	ct1.get_brain().show_all_ideas();
 	ct2.get_brain().show_all_ideas();
 	ct2 = ct1;
 	ct1.get_brain().show_all_ideas();
 	ct2.get_brain().show_all_ideas();
-	cout << "Cat1 brain adress" << &ct1.get_brain() << endl;
-	cout << "Cat2 brain adress" << &ct2.get_brain() << endl << endl;
+	cout << "Cat1 brain address" << &ct1.get_brain() << endl;
+	cout << "Cat2 brain address" << &ct2.get_brain() << endl << endl;
 
 
-	cout << "Dog1 brain adress" << &dg1.get_brain() << endl;
-	cout << "Dog2 brain adress" << &dg2.get_brain() << endl;
+	cout << "Dog1 brain address" << &dg1.get_brain() << endl;
+	cout << "Dog2 brain address" << &dg2.get_brain() << endl;
 	dg1.get_brain().show_all_ideas();
 	dg2.get_brain().show_all_ideas();
 	dg2 = dg1;
 	dg1.get_brain().show_all_ideas();
 	dg2.get_brain().show_all_ideas();
-	cout << "Dog1 brain adress" << &dg1.get_brain() << endl;
-	cout << "Dog2 brain adress" << &dg2.get_brain() << endl << endl;
+	cout << "Dog1 brain address" << &dg1.get_brain() << endl;
+	cout << "Dog2 brain address" << &dg2.get_brain() << endl << endl;
 
 	for(int i = 0; i < 10; ++i)
 		delete animal[i];

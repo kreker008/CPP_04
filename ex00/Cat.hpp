@@ -11,13 +11,19 @@ public:
 	 *  Constructor
 	 */
 	Cat();
+	Cat(const Cat&);
+
+	/*
+	 *  Operator overlord
+	 */
+	Cat& operator=(const Cat&);
 
 	/*
 	 *  Func-member
 	 */
-	void makeSound() const;
+	virtual void makeSound() const;
 
-	~Cat();
+	virtual ~Cat();
 private:
 };
 

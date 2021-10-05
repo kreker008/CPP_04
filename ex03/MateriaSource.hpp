@@ -10,6 +10,11 @@ public:
 	 *  Constructor
 	 */
 	MateriaSource();
+	MateriaSource(const MateriaSource&);
+
+	/*
+	 * Operator overlord
+	 */
 
 	/*
 	 *  Func-member
@@ -17,7 +22,7 @@ public:
 	virtual void learnMateria(AMateria*);
 	virtual AMateria* createMateria(std::string const & type);
 
-	~MateriaSource();
+	virtual ~MateriaSource();
 private:
 	AMateria	*materia_source[4];
 };

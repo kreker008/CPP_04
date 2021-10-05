@@ -5,8 +5,18 @@
  */
 Cure::Cure() : AMateria("cure")
 {
-
+	std::cout << "Cure constructor was worked" << std::endl;
 }
+
+Cure::Cure(const Cure& c) : AMateria(c.getType())
+{
+	std::cout << "Cure constructor was worked" << std::endl;
+}
+
+/*
+ *  Operator overlord
+ */
+Cure& Cure::operator=(const Cure&) {return (*this);} // privat unused func
 
 /*
  *  Func-member
@@ -22,7 +32,8 @@ void Cure::use(ICharacter& target)
 	<< " wound" << std::endl;
 }
 
-/*
- *  Operator overlord
- */
-Cure& Cure::operator=(const Cure&) {return (*this);} // privat unused func
+Cure::~Cure()
+{
+	std::cout << "Cure destructor was worked" << std::endl;
+}
+

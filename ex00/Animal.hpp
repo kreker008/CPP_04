@@ -11,7 +11,13 @@ public:
 	 *  Constructor
 	 */
 	Animal();
-	Animal(std::string const&);
+	explicit Animal(std::string const&);
+	Animal(const Animal&);
+
+	/*
+	 *  Operator overlord
+	 */
+	Animal& operator=(const Animal&);
 
 	/*
 	 *  Func-member
@@ -19,7 +25,7 @@ public:
 	virtual void				makeSound() const;
 	virtual std::string const&	getType() const;
 
-	~Animal();
+	virtual ~Animal();
 private:
 	std::string type;
 };
