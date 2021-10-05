@@ -12,17 +12,17 @@ class AMateria
 protected:
 	const std::string type;
 
+	/*
+	 *  Operator overlord
+	 */
+	AMateria& operator=(const AMateria&);
+
 public:
 	/*
 	 *  Constructor
 	 */
 	AMateria(std::string const & type);
 	AMateria(const AMateria&);
-
-	/*
-	 *  Operator overlord
-	 */
-	AMateria& operator=(const AMateria&);
 
 	/*
 	 *  Func-member

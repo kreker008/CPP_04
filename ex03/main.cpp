@@ -27,9 +27,26 @@ int main()
 	me->use(1, *bob);
 
 	std::cout << std::endl;
-	delete bob;
 	delete me;
 	delete src;
+	std::cout << std::endl;
 
+	Character mark("mark");
+	std::cout << std::endl;
+
+	mark.equip(new Ice());
+	std::cout << std::endl;
+
+	Character mark_clone = mark;
+	std::cout << std::endl;
+
+	mark_clone.use(0, *bob);
+	std::cout << std::endl;
+
+	Character nothing("nothing");
+
+	nothing = mark;
+
+	nothing.use(0, *bob);
 	return 0;
 }

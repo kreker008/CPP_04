@@ -12,13 +12,14 @@ public:
 	/*
 	 *  Constuctor
 	 */
-	Character(std::string const&);
+	explicit Character(std::string const&);
 	Character(Character const&);
 
 	/*
 	 *  Operator overlord
 	 */
 	Character& operator=(Character const&);
+
 	/*
 	 *  Func-member
 	 */
